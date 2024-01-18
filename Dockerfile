@@ -25,8 +25,6 @@ RUN composer install
 # Generate Laravel application key
 RUN php artisan key:generate
 
-RUN php artisan migrate
-
 RUN php artisan storage:link
 
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache \
